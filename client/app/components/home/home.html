@@ -1,9 +1,27 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
 <main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
-  </div>
+  <h1>Angular 1.5 Component Bindings:</h1>
+
+  <h2>Open up the console to see the magic!</h2>
+
+  <p><button role="button" ng-click="$ctrl.changeObject()">Change Object</button></p>
+
+  <hr/>
+
+  <form ng-submit="$ctrl.submit()">
+
+    <test-component
+      some-object="$ctrl.someObject"
+
+      simple-cb="$ctrl.simpleCb()"
+      cb-with-data="$ctrl.cbWithData(name, eXactCase)"
+
+      some-string="{{$ctrl.someString}}"
+
+      input-model="$ctrl.model.name"
+    ></test-component>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
 </main>

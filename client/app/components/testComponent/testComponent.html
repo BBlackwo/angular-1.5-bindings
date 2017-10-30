@@ -1,0 +1,29 @@
+<div>
+  <h3>One way binding (<)</h3>
+  <h4>{{$ctrl.someObject.name}}</h3>
+  <p>{{$ctrl.someObject.desc}}</p>
+</div>
+
+<hr/>
+
+<div>
+  <h3>Callbacks (&)</h3>
+  <p><button type="button" ng-click="$ctrl.simpleCb()">Simble Callback</button></p>
+  <p><button type="button"
+    ng-click="$ctrl.cbWithData({ name: 'Bob.', eXactCase: 'Something with exact casing.' })">
+    Callback With Data
+  </button></p>
+</div>
+
+<hr/>
+
+<div>
+  <h3>Evaluated DOM attribute (@)</h3>
+  <p>{{$ctrl.someString}}</p>
+</div>
+
+<hr/>
+
+<h3>Two-way binding (=)</h3>
+<label for="name">Name:</label>
+<input id="name" type="string" name="name" ng-model="$ctrl.inputModel"/>
